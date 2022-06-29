@@ -1,1 +1,196 @@
-//
+@import './partials/general';
+@import './partials/mixins';
+@import './partials/vars';
+
+
+//header
+header{
+    .container{
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo img{
+            height: 85%;
+        }
+    }
+
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+
+        li{
+            margin: 8px 15px;
+            vertical-align: middle;
+            line-height: 67px;
+            font-weight: bold;
+            a{
+                color: black;
+            }
+        }
+
+        li.active{
+            border-bottom: 5px solid $main-blue;
+        }
+    }
+}
+
+
+//jumbotron
+.jumbotron{
+    height: 400px;
+
+    background-image: url("../img/jumbotron.jpg");
+}
+
+
+//main-cards
+.main-cards-comp{
+    background-color: #161616;
+    .container{
+        position: relative;
+
+        .curent-series strong{
+            position: absolute;
+            top: -20px;
+            padding: 15px 20px;
+            font-size: 1.6rem;
+            font-weight: bolder;
+            color: white;
+            background-color: $main-blue;
+        }
+
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding-top: 65px;
+
+        }
+    }
+}
+
+//card-component
+.card{
+    margin: auto 10px; 
+    width: 200px;
+    
+
+    .card-img{
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+        
+        p{
+            margin: 10px auto;
+            color: white;
+        }
+                
+}
+
+
+//links-before-footer
+.links-before-footer{
+    height: 150px;
+    background-color: $main-blue;
+
+    .container{
+        display: flex;
+        justify-content: space-evenly;
+        
+        .link{
+            display: flex;
+            align-items: center;
+        
+            a{
+                color: white;
+                margin: 15px;
+            }
+        
+            img{
+                height: 40%;
+            }
+        }
+    }
+}
+
+//footer
+footer .top-foot{
+    background-image: url('../img/footer-bg.jpg');
+    height: 400px;
+}
+
+footer{
+    
+    .col-sx, .col-center, .col-dx{
+        float: left;
+        margin-right: 40px;
+    
+        display: flex;
+        flex-direction: column;
+        color: white;
+    
+        strong{
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+    
+        li{
+            margin-top: 8px;
+        }
+    
+        li a{
+            color: #949496;
+    
+            &:hover{
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    
+    .bottom-foot{
+        height: 100px;
+        background-color: #2d2d2d;
+    
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .btn-signup, .follow-other-platforms{
+            display: flex;
+            align-items: center;
+        }
+    
+        .btn-signup{
+            a{
+                padding: 10px;
+                color: white;
+                border: 2px solid $main-blue;
+            }
+        }
+    
+        .follow-other-platforms{
+            strong{
+                color: $main-blue;
+            }
+    
+            a{
+                margin-left: 20px;
+    
+                img{
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
