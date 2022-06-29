@@ -8,17 +8,21 @@
     content: '';
     display: table;
     clear: both;
-  }
+}
 
-  .container{
-    width: 70%;
-    margin: 0 auto;
-  }
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-  li{
+.container{
+   width: 70%;
+   margin: 0 auto;
+}
+
+li{
     list-style: none;
-  }
+}
 
-  a{
+a{
     text-decoration: none;
-  }
+}

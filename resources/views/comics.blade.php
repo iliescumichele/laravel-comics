@@ -11,19 +11,18 @@
                 <strong>CURENT SERIES</strong>
             </div>
 
-            @dump($comics)
-
-
             <div class="cards">
 
-                <!--
-                <cardComp 
-                    v-for="(cardItem, index) in cardList"
-                    :key="`card${index}`"
-                    :cardData="cardItem"
-                />
-                -->
-
+                @foreach ($comics as $item)
+                    <div class="card">
+                        <div class="card-img">
+                            <a href="">
+                                <img src="{{ $item->image }}" :alt="{{ $item->title }}">
+                            </a>
+                        </div>
+                        <a href=""><p>{{ $item->title }}</p></a>
+                    </div>
+                @endforeach
 
             </div>
         </div>
