@@ -7,13 +7,13 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-    <title>Document</title>
+    <title>DC</title>
 </head>
 <body>
     @include('partials.header')
 
     
-    @yield('content')
+    @yield('content-comics')
 
 
     @include('partials.footer')

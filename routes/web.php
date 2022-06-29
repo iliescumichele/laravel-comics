@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\RouteRegistrar;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
 
+    $data = config('comics');
+
+    return view('comics', ['comics' => $data]);
+})->name('comics');
+
+Route::get('/movies', function () {
+
+    return view('movies');
+})-> name('movies');
 
